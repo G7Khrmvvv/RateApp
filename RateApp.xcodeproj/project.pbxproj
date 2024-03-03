@@ -13,6 +13,7 @@
 		8846DDE72B944E99003A98A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846DDE52B944E99003A98A4 /* Main.storyboard */; };
 		8846DDE92B944E9C003A98A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8846DDE82B944E9C003A98A4 /* Assets.xcassets */; };
 		8846DDEC2B944E9C003A98A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8846DDEA2B944E9C003A98A4 /* LaunchScreen.storyboard */; };
+		8846DDF82B945899003A98A4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8846DDF72B945899003A98A4 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8846DDF82B945899003A98A4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +58,39 @@
 		8846DDDE2B944E99003A98A4 /* RateApp */ = {
 			isa = PBXGroup;
 			children = (
-				8846DDDF2B944E99003A98A4 /* AppDelegate.swift */,
-				8846DDE12B944E99003A98A4 /* SceneDelegate.swift */,
-				8846DDE32B944E99003A98A4 /* ViewController.swift */,
-				8846DDE52B944E99003A98A4 /* Main.storyboard */,
+				8846DDF52B944EAF003A98A4 /* App */,
+				8846DDF42B944EA9003A98A4 /* Main */,
+				8846DDF32B944EA2003A98A4 /* Res */,
+			);
+			path = RateApp;
+			sourceTree = "<group>";
+		};
+		8846DDF32B944EA2003A98A4 /* Res */ = {
+			isa = PBXGroup;
+			children = (
 				8846DDE82B944E9C003A98A4 /* Assets.xcassets */,
 				8846DDEA2B944E9C003A98A4 /* LaunchScreen.storyboard */,
 				8846DDED2B944E9C003A98A4 /* Info.plist */,
 			);
-			path = RateApp;
+			path = Res;
+			sourceTree = "<group>";
+		};
+		8846DDF42B944EA9003A98A4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8846DDE32B944E99003A98A4 /* ViewController.swift */,
+				8846DDE52B944E99003A98A4 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8846DDF52B944EAF003A98A4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8846DDDF2B944E99003A98A4 /* AppDelegate.swift */,
+				8846DDE12B944E99003A98A4 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +109,9 @@
 			dependencies = (
 			);
 			name = RateApp;
+			packageProductDependencies = (
+				8846DDF72B945899003A98A4 /* SnapKit */,
+			);
 			productName = RateApp;
 			productReference = 8846DDDC2B944E99003A98A4 /* RateApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +140,9 @@
 				Base,
 			);
 			mainGroup = 8846DDD32B944E99003A98A4;
+			packageReferences = (
+				8846DDF62B945899003A98A4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8846DDDD2B944E99003A98A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -291,7 +323,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QB9SZGTXYL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RateApp/Info.plist;
+				INFOPLIST_FILE = RateApp/Res/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QB9SZGTXYL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RateApp/Info.plist;
+				INFOPLIST_FILE = RateApp/Res/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -360,6 +392,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8846DDF62B945899003A98A4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8846DDF72B945899003A98A4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8846DDF62B945899003A98A4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8846DDD42B944E99003A98A4 /* Project object */;
 }
